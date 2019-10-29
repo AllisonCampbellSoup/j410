@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="slideshowstyle.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    
+    <div class="outer-container">
+<div class="slideshow-container">
+    
+    <div class="title">
+   <h1>Mindful Movement</h1>
+    </div>
+    
+    <div class="project-topic">
+   <h1>An Afternoon of Acro</h1>
+    </div>
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 11</div>
+  <img src="1.jpg" style="width:100%">
+  <div class="text">Every Sunday afternoon at Mitchell Park, yoga instructor and kundalini anchorite conduit Liz Crosby dedicates a piece of the lawn for acroyoga enthusiasts to practice.
+</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 11</div>
+  <img src="2.jpg" style="width:100%">
+  <div class="text">Acroyoga is the partner practice of combining yoga, acrobatics and Thai massage. It trains you to master self-control and tune out external stimuli, as the slightest disturbance or shift can knock you off your center.</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 11</div>
+  <img src="3.jpg" style="width:100%">
+  <div class="text">Fourth year finance major Ernesto Ramirez practices his hand stands with help from yoga instructor Liz Cosby. Ernesto says he joined the acro community “to find a way to relax while still being active at the end of a stressful week.”</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 11</div>
+  <img src="4.jpg" style="width:100%">
+  <div class="text">Liz and Ernesto excitedly practice their star pose as pat of the #acrovinyasa October challenge, a sequence of thirty poses performed back to back, one for each day of the month.</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 11</div>
+  <img src="5.jpg" style="width:100%">
+  <div class="text">Spotters Scott and Doug catch Amanda as she falls to of position. “I love welcoming new comers and seeing how excited they get when they're able to hold a new position,” says Scott Larson, Crosby’s right hand man at acro afternoons. </div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">6 / 11</div>
+  <img src="6.jpg" style="width:100%">
+  <div class="text">Grant Gilbert, a fourth year physics major and president of the mindfulness club on campus, bases Ernesto in a standing position. Grant gets his homework done early so he can enjoy his Sundays in SLO. “I’ve started going to the Bohi Path for meditation Sunday mornings. I’m grateful this goes on for a few hours in the afternoons so I can come stretch my body after a morning of stretching my mind.”</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">7 / 11</div>
+  <img src="7.jpg" style="width:100%">
+  <div class="text">A member of the group keeps his hands in prayer pose as he holds thrown position in the shade of the trees above him. </div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">8 / 11</div>
+  <img src="8.jpg" style="width:100%">
+  <div class="text">Scott Larson holds a sturdy bow pose, stretching his chest and trusting that his base will keep him balanced as he does so. </div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">9 / 11</div>
+  <img src="9.jpg" style="width:100%">
+  <div class="text">Molly, another Cal Poly yoga enthusiast guides Grant and Ernesto through the steps of a dynamic move, new to most members of the group. Many look on in amusement as the duo tremble and fall multiple times as they become familiar with one another grips. </div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">10 / 11</div>
+  <img src="10.jpg" style="width:100%">
+  <div class="text">Ernesto firmly grips Grant’s arms as they prepare for a second attempt at a sitting to standing flag pose. This time, they were successful!</div>
+</div>
+    
+<div class="mySlides fade">
+  <div class="numbertext">11 / 11</div>
+  <img src="11.jpg" style="width:100%">
+  <div class="text">The first to arrive and the last to leave, Liz Crosby and Scott Larsen continue their practice well into the afternoon. Liz also teaches yoga classes in the Cal Poly recreational center multiple times a week and leads a group of acroyogis every Thursday on Dexter Lawn. </div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+    </div> 
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+    <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+  <span class="dot" onclick="currentSlide(6)"></span> 
+    <span class="dot" onclick="currentSlide(7)"></span> 
+  <span class="dot" onclick="currentSlide(8)"></span> 
+  <span class="dot" onclick="currentSlide(9)"></span> 
+    <span class="dot" onclick="currentSlide(10)"></span> 
+    <span class="dot" onclick="currentSlide(11)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 
